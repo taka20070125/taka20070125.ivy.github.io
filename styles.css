@@ -1,0 +1,317 @@
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #ffefef; /* やさしい赤背景 */
+}
+
+.hero {
+  background: linear-gradient(rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.5)),
+              url("imagess.jpg") center/cover no-repeat;
+  height: 300px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.hero .overlay {
+  background: rgba(255, 0, 0, 0.4); /* 赤の半透明オーバーレイ */
+}
+
+header {
+    background: #444;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1 {
+    border-radius: 50%;
+    margin: 0;
+    font-size: 1.2rem;
+}
+nav a {
+  margin-left: 1rem;
+  color: #66aaff; /* 優しい青 */
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: #3388ff; /* 少し濃い青に変化 */
+}
+
+.category {
+  display: inline-block;
+  background: #f0f8ff; /* 優しい青みがかった背景 */
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(100, 100, 255, 0.1); /* 青系の薄い影 */
+  width: 220px;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #3366aa; /* 本文の青色 */
+}
+
+.category:hover {
+  transform: translateY(-5px);
+  background: #e0f0ff; /* 少し濃いめの青 */
+  box-shadow: 0 4px 12px rgba(100, 100, 255, 0.2);
+  cursor: pointer;
+}
+
+.category:active {
+  transform: translateY(-2px);
+  background: #d0eaff; /* アクティブ時はさらに濃く */
+  box-shadow: 0 2px 6px rgba(100, 100, 255, 0.2);
+}
+
+/* --- ヒーローセクションのスタイル --- */
+.hero {
+    background: url("imagess.jpg") center/cover no-repeat;
+    height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+    z-index: 1;
+}
+
+/* --- カードセクション --- */
+.card-section {
+  background: #fff;
+  padding: 2rem 1rem;
+}
+
+.card-section h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.card {
+  background: #fdfdfd;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 240px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: #f0faff;
+  cursor: pointer;
+}
+
+.card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+}
+.card.martha {
+  background-image: url("ダウンロード%20(1).jpg"); /* スペースは %20 に変換 */
+  background-size: cover;
+  background-position: center;
+  color: #fffbe6; 
+  position: relative;
+  overflow: hidden;
+}
+
+/* オーバーレイで文字が読みやすくなるように調整 */
+.card.martha::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+/* テキストを最前面に */
+.card.martha h3,
+.card.martha p {
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8); /* 黒い影で可読性UP */
+}
+
+.card.masamune {
+  background-image: url("images%20(1).jpg"); /* 半角スペースは %20 でエンコード */
+  background-size: cover;
+  background-position: center;
+  color: #fffbe6; 
+  position: relative;
+  overflow: hidden;
+}
+
+.card.masamune::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* 黒のオーバーレイで文字を見やすく */
+  z-index: 0;
+}
+
+.card.masamune h3,
+.card.masamune p {
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8); /* 黒い影で可読性UP */
+}
+
+
+/* --- キャラクター「エル」のカードに背景画像を追加 --- */
+.card.el {
+  background-image: url("ダウンロード.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fffbe6; 
+  position: relative;
+  overflow: hidden;
+}
+.card.el::before{
+  content: "";
+  position: absolute;
+   top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* 黒のオーバーレイで文字を見やすく */
+  z-index: 0;
+}
+.card.el h3,
+.card.el p{
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8); /* 黒い影で可読性UP */
+}
+.card.lucifer {
+  background-image: url("ダウンロード%20(2).jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fffbe6; /* 薄い黄色 */
+  position: relative;
+  overflow: hidden;
+}
+
+.card.lucifer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* 少し濃いめの黒で明瞭に */
+  z-index: 0;
+}
+
+.card.lucifer h3,
+.card.lucifer p {
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8); /* 黒い影で可読性UP */
+}
+
+.card.lucifer h3,
+.card.lucifer p {
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8); /* 黒い影で可読性UP */
+}
+
+
+
+/* --- カテゴリーセクション --- */
+.category-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem 1rem;
+    gap: 1rem;
+}
+
+.category {
+  display: inline-block;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 220px;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.category:hover {
+  transform: translateY(-5px);
+  background: #f0faff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.category:active {
+  transform: translateY(-2px);
+  background: #e0f2ff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* --- その他スタイル --- */
+.category-highlight {
+    border: 2px solid lightblue;
+}
+.category-full-width {
+    width: 100%;
+    max-width: 500px;
+}
+footer {
+    background: #eee;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.85rem;
+    color: #555;
+}
+html {
+  scroll-behavior: smooth;
+}
