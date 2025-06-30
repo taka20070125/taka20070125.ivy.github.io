@@ -177,7 +177,7 @@ nav a:hover {
 }
 
 .card.masamune {
-  background-image: url("images%20(1).jpg"); /* 半角スペースは %20 でエンコード */
+  background-image: url("images%20(2).jpg"); /* 半角スペースは %20 でエンコード */
   background-size: cover;
   background-position: center;
   color: #fffbe6; 
